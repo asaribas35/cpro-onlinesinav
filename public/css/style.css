@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+}
+
+.header-top{
+    margin-bottom: 1em;
+    width: 100%;
+    height: 0.8em;
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 39%, rgba(252,176,69,1) 100%);
+}
+.nav{
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav ul{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nav ul li{
+    margin: auto 1em;
+}
+
+.form{
+    position: relative;
+    left: 3em;
+    width: 50em;
+    height: 3em;
+}
+
+.form input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.form label{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.form label i{
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    right:0;
+    top: 0;
+    background-color: #231f20;
+    color: white;
+}
+.bi-search::before{
+    position: relative;
+    left: 2em;
+    top: 0.6em;
+}
+.form-control:focus {
+    border-color: #231f20 !important;
+    box-shadow: 0 0 0 0.2rem rgba(35, 31, 32, 0.25) !important;
+} 
+.buttons{
+    width: 13em;
+    position: relative;
+    position: relative;
+    left: 19vh;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.butonS{
+    position:absolute;
+    right: 0px;
+    height: 100%;
+}
+.buton2{
+    width: 4em;
+    height:70%;
+    margin: auto;
+}
+
