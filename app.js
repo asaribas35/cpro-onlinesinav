@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const exphbs  = require('express-handlebars')
 const port = 3000
 const hostname = '127.0.0.1'
 
@@ -11,8 +12,16 @@ app.use('/test',(req,res,next) => {
     next();
 })
 
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
+
 app.get('/', (req,res) => {
-    res.sendFile(path.resolve(__dirname,'./site/index.html'))
+    res.render('site/index')
+})
+
+
+app.get('/login', (req,res) => {
+    res.render('site/login')
 })
 
 
