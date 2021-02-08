@@ -7,10 +7,7 @@ const hostname = '127.0.0.1'
 
 app.use(express.static('public'))
 
-app.use('/test',(req,res,next) => {
-    console.log("sdasdas");
-    next();
-})
+
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
