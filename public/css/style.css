@@ -10,7 +10,7 @@ body{
 background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 39%, rgba(252,176,69,1) 100%);
 }
 .header-bottom{
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100%;
     height: 0.4em;
@@ -96,6 +96,7 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 39%,
     width: 360px;
     height: 480px;
     margin: auto;
+    right: 32em;
     top:50px;
     border: 0.5px solid #cc3c47;
     background-color: #fefefe;
@@ -115,6 +116,18 @@ form{
     bottom: 3em;
     width: 40%;
     left: 12vh;
+}
+.loginImage{
+   background-image: url("/img/j-kelly-brito-PeUJyoylfe4-unsplash.jpg");
+   background-position: center; 
+   background-repeat: no-repeat; 
+   background-size: cover;
+    position: relative;
+    width: 40%;
+    height: 40em;
+    left: 52em;
+    bottom: 28em;
+    overflow: hidden;
 }
 
 

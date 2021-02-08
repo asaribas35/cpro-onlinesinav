@@ -11,7 +11,6 @@ app.use('/test',(req,res,next) => {
     console.log("sdasdas");
     next();
 })
-
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
