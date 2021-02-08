@@ -23,6 +23,13 @@ app.get('/login', (req,res) => {
     res.render('site/login')
 })
 
+app.get('/signup', (req,res) => {
+    res.render('site/signup')
+})
+
+app.get('/addexam', (req,res) => {
+    res.render('site/addexam')
+})
 
 app.listen(port, hostname , () => {
     console.log(`sserver running http://${hostname}:${port}/`);

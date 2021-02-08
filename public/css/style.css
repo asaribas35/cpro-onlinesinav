@@ -1,7 +1,13 @@
 body{
     margin: 0;
 }
-
+.logo{
+    text-decoration: none;
+    color: black;
+}
+.logo:hover{
+    color: #231f20;
+}
 .header-top{
     margin-bottom: 1em;
     width: 100%;
@@ -127,8 +133,44 @@ form{
     height: 40em;
     left: 52em;
     bottom: 28em;
-    overflow: hidden;
+    border-radius: 5px;
+}
+.signup-form{
+    width: 40%;
+    display: inline-block;
+}
+.hint-text{
+    text-align: center;
+}
+.signup-form form {
+
+	color: #999;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	background: #fff;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
 }
 
+.signImage{
+    background-image: url("/img/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+     float: right;
+     width: 40%;
+     height: 40em;
+     left: 52em;
+     bottom: 28em;
+     border-radius: 5px;
+     margin-right: 12%;
+ }
 
-
+.form-sorular{
+    margin-top: 2em;
+}
+.submit{
+    position: relative;
+    top: 1.2em;
+    left: 2em;
+}
