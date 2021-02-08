@@ -174,3 +174,24 @@ form{
     top: 1.2em;
     left: 2em;
 }
+.button{
+    position: absolute;
+    right: 3em;
+    top:1.8em;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+.button span{
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+
+.examCard{
+    margin-top: 1em;
+     margin-bottom: 1em;
+     width: 70% !important;
+}

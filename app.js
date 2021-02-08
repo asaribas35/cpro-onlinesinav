@@ -31,6 +31,10 @@ app.get('/addexam', (req,res) => {
     res.render('site/addexam')
 })
 
+app.get('/exampage', (req,res) => {
+    res.render('site/exampage')
+})
+
 app.listen(port, hostname , () => {
     console.log(`sserver running http://${hostname}:${port}/`);
 })
