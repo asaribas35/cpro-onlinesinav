@@ -1,9 +1,18 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const mongoose = require('mongoose')
 const exphbs  = require('express-handlebars')
 const port = 3000
 const hostname = '127.0.0.1'
+
+mongoose.connect('mongodb://127.0.0.1/cpro_db', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+});
+
 
 app.use(express.static('public'))
 
@@ -11,28 +20,10 @@ app.use(express.static('public'))
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-app.get('/', (req,res) => {
-    res.render('site/index')
-})
-
-
-app.get('/login', (req,res) => {
-    res.render('site/login')
-})
-
-app.get('/signup', (req,res) => {
-    res.render('site/signup')
-})
-
-app.get('/addexam', (req,res) => {
-    res.render('site/addexam')
-})
-
-app.get('/exampage', (req,res) => {
-    res.render('site/exampage')
-})
+const main = require('./routes/main')
+app.use('/',main)
 
 app.listen(port, hostname , () => {
-    console.log(`sserver running http://${hostname}:${port}/`);
+    console.log(`server running http://${hostname}:${port}/`);
 })
 
