@@ -23,7 +23,9 @@ router.get('/signup', (req,res) => {
 })
 
 
+
 router.get('/exampage', (req,res) => {
+    console.log(req.url);
     res.render('site/exampage')
 })
 

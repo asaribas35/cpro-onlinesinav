@@ -16,6 +16,7 @@
 
 
         {{#each exams}}
+        <form action="/exampage">
         <div class="container">
           <div class="row">
                 <div class="card examCard" >
@@ -24,9 +25,10 @@
                         <p class="card-text"> {{sure}} Dakika &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tarih : 2021-05-21 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Saat : {{saat}} </p>
                     </div>
                     <div class="button">
-                        <a href="/exampage"><button type="button" class="btn btn-danger buton1">Start</button></a>
+                        <a ><button name={{dersAdi}} type="submit" class="btn btn-danger buton1">Start</button></a>
                     </div>
                 </div>
           </div>
         </div>
+        </form>
         {{/each}}
