@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
-const PostSchema = new mongoose.Schema({
+const ExamSchema = new mongoose.Schema({
+    
     dersAdi: { type: String, require:true},
     tarih: { type: Date, require:true},
     saat: { type: String, require:true},
@@ -9,4 +10,4 @@ const PostSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('Post', PostSchema)
+module.exports = mongoose.model('Exam', ExamSchema)

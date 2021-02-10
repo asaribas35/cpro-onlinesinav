@@ -1,8 +1,16 @@
 const express =require('express')
+const Exam = require('../models/Exam')
 const router = express.Router()
 
+
+
+
 router.get('/', (req,res) => {
-    res.render('site/index')
+    Exam.find({}).then(exams => {
+        res.render('site/index', {
+            exams:exams.map(item => item.toJSON())
+        })
+    })
 })
 
 
@@ -14,12 +22,21 @@ router.get('/signup', (req,res) => {
     res.render('site/signup')
 })
 
-router.get('/addexam', (req,res) => {
-    res.render('site/addexam')
-})
 
 router.get('/exampage', (req,res) => {
     res.render('site/exampage')
 })
+
+router.get('/addexam', (req,res) => {
+    res.render('site/addexam')
+})
+
+router.post('/exams/test', (req,res) => {
+    Exam.create(req.body)
+
+    res.redirect('/')
+})
+
+
 
 module.exports = router
