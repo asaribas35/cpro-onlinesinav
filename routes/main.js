@@ -13,6 +13,13 @@ router.get('/', (req,res) => {
     })
 })
 
+router.get('/exampage/:id', (req,res) => {
+    Exam.findById(req.params.id).lean().then(exam => {
+        res.render('site/exampage', {exam:exam})
+    })
+})
+
+
 
 router.get('/login', (req,res) => {
     res.render('site/login')
