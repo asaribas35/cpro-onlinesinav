@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 
 const ExamSchema = new mongoose.Schema({
     
-    dersAdi: { type: String, require:true},
-    tarih: { type: Date, require:true},
-    saat: { type: String, require:true},
-    sure: { type: String, require:true},
+    dersAdi: { type: String, required:true},
+    tarih: { type: Date, required:true},
+    saat: { type: String, required:true},
+    sure: { type: String, required:true},
     date: {type:Date, default: Date.now}
 
 })
