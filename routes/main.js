@@ -1,5 +1,6 @@
 const express =require('express')
 const Exam = require('../models/Exam')
+const Question = require('../models/Question')
 const router = express.Router()
 
 
@@ -42,7 +43,7 @@ router.get('/addexam', (req,res) => {
 
 router.post('/exams/test', (req,res) => {
     Exam.create(req.body)
-
+    
     res.redirect('/')
 })
 
