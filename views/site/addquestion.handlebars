@@ -8,29 +8,29 @@
             <div class="row " >
             <div class="col-md-6">
                 <label for="exampleFormControlTextarea1" class="form-label"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                <textarea name="soruText" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
             </div>
             <div class="col-md-3 cevaplar">
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label"></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput"
+                    <input name="sikA" type="text" class="form-control" id="formGroupExampleInput"
                         placeholder="A">
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label"></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                    <input name="sikC" type="text" class="form-control" id="formGroupExampleInput2"
                         placeholder="C">
                 </div>
             </div>
                 <div class="col-md-3 cevaplar">
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label"></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput"
+                    <input name="sikB" type="text" class="form-control" id="formGroupExampleInput"
                         placeholder="B">
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label"></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                    <input name="sikD" type="text" class="form-control" id="formGroupExampleInput2"
                         placeholder="D">
                 </div>
             </div>
@@ -41,10 +41,14 @@
                 <a href=""><button  type="submit" class="btn btn-danger addButton">Ekle</button></a>
             </div>
               <div class="col-md-1">
-                <a href="/"><button   class="btn btn-light buton1">Bitir</button></a>
+                <a ><button   class="btn btn-light buton1">Bitir</button></a>
             </div>
              </div>
-        
+            <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label"></label>
+                    <input name="dersId" type="hidden" class="form-control" id="formGroupExampleInput2"
+                        value="{{exam._id}}">
+                </div>
         </form>
         
 

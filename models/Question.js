@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const questionSchema = new mongoose.Schema({
-    dersAdi: { type: String, required:true},
+    dersId: { type: String, required:true},
     soruText: { type: String, required:false},
     sikA: { type: String, required:false},
     sikB: { type: String, required:false},

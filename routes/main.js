@@ -23,6 +23,7 @@ router.get('/addexam/addquestion/:id', (req,res) => {
     Exam.findById(req.params.id).lean().then(exam => {
         res.render('site/addquestion', {exam:exam})
     })
+    Question.dersId=req.params.id
 })
 
 
@@ -45,6 +46,7 @@ router.get('/addexam', (req,res) => {
     res.render('site/addexam')
 })
 router.post('/questions/test', (req,res) => {
+    
     Question.create(req.body)
     
     res.redirect('/')
