@@ -16,7 +16,7 @@ router.get('/', (req,res) => {
 
 router.get('/exampage/:id', (req,res) => {
     
-    var para = '602ae53aa35088319879a0fb'
+    var para = req.params.id;
     
     Question.find({dersId: para }).lean().then(question => {
         res.render('site/exampage', {question:question})
