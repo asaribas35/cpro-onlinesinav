@@ -1,6 +1,7 @@
 body{
     margin: 0;
 }
+
 .logo{
     text-decoration: none;
     color: black;
@@ -110,7 +111,7 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 39%,
 }
 
 form{
-    width: 80%;
+    width: 100%;
     margin: 3em auto;
     
 }
@@ -186,6 +187,10 @@ form{
     right: 8em;
     top:1.8em;
     font-family: 'Poppins', sans-serif;
+}
+.addButton{
+    height: 3em;
+    width: 6em;
 }
 
 .button span{

@@ -44,7 +44,11 @@ router.get('/exampage', (req,res) => {
 router.get('/addexam', (req,res) => {
     res.render('site/addexam')
 })
-
+router.post('/questions/test', (req,res) => {
+    Question.create(req.body)
+    
+    res.redirect('/')
+})
 
 
 router.post('/exams/test', (req,res) => {
