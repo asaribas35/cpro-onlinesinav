@@ -15,15 +15,19 @@ router.get('/', (req,res) => {
 })
 
 router.get('/exampage/:id', (req,res) => {
-    Exam.findById(req.params.id).lean().then(exam => {
-        res.render('site/exampage', {exam:exam})
+    
+    var para = '602ae53aa35088319879a0fb'
+    
+    Question.find({dersId: para }).lean().then(question => {
+        res.render('site/exampage', {question:question})
     })
+    
 })
 router.get('/addexam/addquestion/:id', (req,res) => {
     Exam.findById(req.params.id).lean().then(exam => {
         res.render('site/addquestion', {exam:exam})
     })
-    Question.dersId=req.params.id
+    
 })
 
 
