@@ -181,6 +181,12 @@ form{
     font-family: 'Poppins', sans-serif;
    
 }
+.buttonEkle{
+    position: absolute;
+    right: 8em;
+    top:1.8em;
+    font-family: 'Poppins', sans-serif;
+}
 
 .button span{
     color: white;

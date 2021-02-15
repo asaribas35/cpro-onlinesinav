@@ -19,7 +19,11 @@ router.get('/exampage/:id', (req,res) => {
         res.render('site/exampage', {exam:exam})
     })
 })
-
+router.get('/addexam/addquestion/:id', (req,res) => {
+    Exam.findById(req.params.id).lean().then(exam => {
+        res.render('site/addquestion', {exam:exam})
+    })
+})
 
 
 router.get('/login', (req,res) => {
@@ -40,6 +44,8 @@ router.get('/exampage', (req,res) => {
 router.get('/addexam', (req,res) => {
     res.render('site/addexam')
 })
+
+
 
 router.post('/exams/test', (req,res) => {
     Exam.create(req.body)
