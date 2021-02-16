@@ -52,14 +52,14 @@ router.get('/addexam', (req,res) => {
 router.post('/questions/test', (req,res) => {
     
     Question.create(req.body)
-    
-    res.redirect('/')
+    console.log(req.body)
+    res.redirect('/addexam/addquestion/' + req.body.dersId)
 })
 
 
 router.post('/exams/test', (req,res) => {
     Exam.create(req.body)
-    
+   
     res.redirect('/')
 })
 
