@@ -98,13 +98,11 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 39%,
 }
 
 .formSayfa1{
-    
-    position: relative;
+
     width: 360px;
     height: 480px;
     margin: auto;
-    right: 32em;
-    top:50px;
+
     border: 0.5px solid #cc3c47;
     background-color: #fefefe;
     border-radius: 0.5em;
@@ -116,27 +114,28 @@ form{
     
 }
 .formLogin{
+    display: flex;
+}
+.formLogin1{
     width: 85%;
 }
 .form-group{
     margin-top: 2em;
 }
 .sinBut{
-    position: absolute;
-    bottom: 3em;
-    width: 40%;
-    left: 12vh;
+ width: 80%;
+ margin-top: 1em;
+ margin-left: 1em;
 }
 .loginImage{
    background-image: url("/img/j-kelly-brito-PeUJyoylfe4-unsplash.jpg");
    background-position: center; 
    background-repeat: no-repeat; 
    background-size: cover;
-    position: relative;
+    
     width: 40%;
     height: 40em;
-    left: 52em;
-    bottom: 28em;
+    margin-right: 10%;
     border-radius: 5px;
 }
 .signup-form{
