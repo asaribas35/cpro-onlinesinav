@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const exphbs  = require('express-handlebars')
 const port = 3000
 const hostname = '127.0.0.1'
-
+const moMent = require('moment')
 
 
 mongoose.connect('mongodb://127.0.0.1/cpro_data', {
@@ -19,8 +19,15 @@ mongoose.connect('mongodb://127.0.0.1/cpro_data', {
 
 app.use(express.static('public'))
 
+const hbs = exphbs.create({     // tarih dönüşümleri için handlebars helper tanımlaması
+  helpers: {
+    generateDate : (date,format) => {
+      return moMent(date).format(format)  // moment paketi kullanıldı
+    }
+  }
+})
 
-app.engine('handlebars', exphbs());
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 // parse application/x-www-form-urlencoded
@@ -32,6 +39,7 @@ app.use(bodyParser.json())
 
 
 const main = require('./routes/main')
+const moment = require('moment')
 
 app.use('/',main)
 
