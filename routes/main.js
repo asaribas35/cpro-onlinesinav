@@ -63,6 +63,24 @@ router.post('/users/test', (req,res) => {
    
     
 })
+router.post('/users/logintest', (req,res) => {
+    
+    const {email, password} = req.body
+    User.findOne({email},(error, user) => {
+        if (user) {
+            if(user.password == password) {
+                res.redirect('/')
+            } else {
+                res.redirect('/login')
+            }
+        } else {
+            res.redirect('/signup')
+        }
+    })
+   
+    
+})
+
 
 router.post('/exams/test', (req,res) => {
     Exam.create(req.body)
