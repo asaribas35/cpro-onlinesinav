@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/63b52867-dd05-4b0b-88e0-6a7050443946/resourceGroups/MyResourceGroup/providers/Microsoft.Web/sites/cproonline",
+    "appService.deploySubpath": "."
+}

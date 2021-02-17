@@ -4,7 +4,7 @@ const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const exphbs  = require('express-handlebars')
-const port = 3000
+const port = process.env.port || 3000
 const hostname = '127.0.0.1'
 const moMent = require('moment')
 const CONNECTION_URL = "mongodb+srv://alisaribas:cpro123@cpro.0cuh4.mongodb.net/<dbname>?retryWrites=true&w=majority"
