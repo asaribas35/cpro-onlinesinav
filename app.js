@@ -7,9 +7,9 @@ const exphbs  = require('express-handlebars')
 const port = 3000
 const hostname = '127.0.0.1'
 const moMent = require('moment')
+const CONNECTION_URL = "mongodb+srv://alisaribas:cpro123@cpro.0cuh4.mongodb.net/<dbname>?retryWrites=true&w=majority"
 
-
-mongoose.connect('mongodb://127.0.0.1/cpro_data', {
+mongoose.connect(CONNECTION_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -39,7 +39,7 @@ app.use(bodyParser.json())
 
 
 const main = require('./routes/main')
-const moment = require('moment')
+
 
 app.use('/',main)
 
